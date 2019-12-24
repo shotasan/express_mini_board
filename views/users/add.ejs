@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title><%=title %></title>
+  <link rel="stylesheet" href="/stylesheet/style.css">
+</head>
+
+<body>
+
+  <head>
+    <h1><%=title %></h1>
+  </head>
+  <div role="main">
+    <p><%- content %></p>
+    <form action="/users/add" method="POST">
+      <table>
+        <tr>
+          <th>NAME</th>
+          <td><input type="text" name="name" value="<%=form.name %>"></td>
+        </tr>
+        <tr>
+          <th>PASSWORD</th>
+          <td><input type="password" name="password" value="<%=form.password %>"></td>
+        </tr>
+        <tr>
+          <th>COMMENT</th>
+          <td><textarea name="comment"><%=form.comment %></textarea></td>
+        </tr>
+        <tr>
+          <th></th>
+          <td><input type="submit" value="作成"></td>
+        </tr>
+      </table>
+    </form>
+  </div>
+</body>
+
+</html>
